@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Impressum – Lüftungsprotokoll Digital"
+	description="Impressum und rechtliche Informationen zu Lüftungsprotokoll Digital"
+>
+	<main class="legal-page">
+		<div class="legal-container">
+			<h1>Impressum</h1>
+
+			<section class="legal-section">
+				<h2>Verantwortlich für den Inhalt:</h2>
+				<address>
+					Aron Schüler IT Services<br>
+					Karlstr. 17-19<br>
+					50679 Köln<br>
+					Deutschland
+				</address>
+			</section>
+
+			<section class="legal-section">
+				<h3>Kontakt:</h3>
+				<p>
+					Per E-Mail: <a href="mailto:lueftungsprotokoll-digital@lakur.tech">lueftungsprotokoll-digital@lakur.tech</a><br>
+					Website: <a href="https://aronschueler.de" target="_blank" rel="noopener noreferrer">https://aronschueler.de</a>
+				</p>
+			</section>
+
+			<hr>
+
+			<section class="legal-section">
+				<h2>Urheberrechtserklärung</h2>
+				<p>
+					Die Inhalte dieser Website [lueftungsprotokoll-digital.de] werden ausschließlich zu Informationszwecken bereitgestellt.
+					Alle Texte, Bilder, Grafiken und andere Materialien auf dieser Website unterliegen dem Urheberrecht und anderen
+					geistigen Eigentumsrechten von Aron Schüler, sofern nicht anders angegeben.
+				</p>
+
+				<h3>Berechtigungen:</h3>
+				<p>
+					Sie dürfen Inhalte ausschließlich zu persönlichen und nicht-kommerziellen Zwecken ansehen, herunterladen und ausdrucken.
+					Jede andere Verwendung oder Vervielfältigung ohne die ausdrückliche schriftliche Zustimmung von Aron Schüler ist
+					strengstens untersagt.
+				</p>
+
+				<h3>Urheberrechtshinweis:</h3>
+				<p>
+					Alle Rechte vorbehalten, sofern nicht anders ausdrücklich angegeben. Falls Sie der Meinung sind, dass Inhalte auf
+					dieser Website Ihr Urheberrecht oder andere geistige Eigentumsrechte verletzen, kontaktieren Sie uns bitte
+					umgehend zur Klärung.
+				</p>
+
+				<h3>Inhalte Dritter:</h3>
+				<p>
+					Soweit zutreffend, werden Urheberrechte und Markenzeichen Dritter anerkannt und respektiert. Die Verwendung von
+					Inhalten Dritter erfolgt in Übereinstimmung mit den geltenden Gesetzen und Vorschriften.
+				</p>
+
+				<h3>Keine Gewährleistung:</h3>
+				<p>
+					Obwohl wir uns bemühen, die Genauigkeit und Aktualität der präsentierten Informationen sicherzustellen, geben wir
+					keinerlei ausdrückliche oder stillschweigende Zusicherungen oder Gewährleistungen hinsichtlich der Vollständigkeit,
+					Genauigkeit, Zuverlässigkeit, Eignung oder Verfügbarkeit der Website oder der Informationen, Produkte, Dienstleistungen
+					oder zugehörigen Grafiken auf der Website für irgendeinen Zweck.
+				</p>
+
+				<h3>Änderungen dieser Erklärung:</h3>
+				<p>
+					Diese Urheberrechtserklärung kann von Zeit zu Zeit aktualisiert werden. Änderungen werden auf dieser Seite
+					veröffentlicht.
+				</p>
+			</section>
+
+			<section class="legal-section">
+				<p class="back-link">
+					<a href="/">&larr; Zurück zur Startseite</a>
+				</p>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.legal-page {
+		min-height: 100vh;
+		background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 100%);
+		padding: 2rem 1.5rem;
+	}
+
+	.legal-container {
+		max-width: 800px;
+		margin: 0 auto;
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	h1 {
+		font-size: 2.5rem;
+		color: var(--color-text);
+		margin-bottom: 2rem;
+		padding-bottom: 1rem;
+		border-bottom: 3px solid var(--color-accent);
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		color: var(--color-text);
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		color: var(--color-text);
+		margin-top: 1.5rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.legal-section {
+		margin-bottom: 2rem;
+	}
+
+	address {
+		font-style: normal;
+		line-height: 1.8;
+		margin-top: 0.5rem;
+	}
+
+	p {
+		line-height: 1.8;
+		color: var(--color-text);
+		margin-bottom: 1rem;
+	}
+
+	a {
+		color: var(--color-accent);
+		text-decoration: underline;
+		transition: color 0.2s ease;
+	}
+
+	a:hover {
+		color: var(--color-accent-hover);
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid var(--color-border);
+		margin: 2rem 0;
+	}
+
+	.back-link {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.back-link a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.back-link a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.legal-container {
+			padding: 1.5rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 1.25rem;
+		}
+
+		h3 {
+			font-size: 1.125rem;
+		}
+	}
+</style>
