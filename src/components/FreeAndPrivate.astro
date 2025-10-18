@@ -1,0 +1,153 @@
+---
+import CTA from './CTA.astro';
+---
+
+<section class="free-private">
+	<div class="free-private__container">
+		<div class="free-private__badge">100% Kostenlos</div>
+		<h2 class="free-private__heading">Ohne Anmeldung.<br />Ohne Kosten.<br />Ohne Kompromisse.</h2>
+		<p class="free-private__description">
+			Lüftungsprotokoll Digital ist komplett kostenlos und respektiert Ihre Privatsphäre.
+			Keine versteckten Gebühren, keine Datensammlung, keine Account-Pflicht.
+			Ihre Protokolle bleiben lokal auf Ihrem Gerät – Sie behalten die volle Kontrolle.
+		</p>
+		<div class="free-private__features">
+			<div class="feature-badge">
+				<span class="feature-badge__icon">✓</span>
+				<span>Keine Registrierung</span>
+			</div>
+			<div class="feature-badge">
+				<span class="feature-badge__icon">✓</span>
+				<span>Keine Kosten</span>
+			</div>
+			<div class="feature-badge">
+				<span class="feature-badge__icon">✓</span>
+				<span>Daten bleiben lokal</span>
+			</div>
+			<div class="feature-badge">
+				<span class="feature-badge__icon">✓</span>
+				<span>DSGVO-konform</span>
+			</div>
+		</div>
+		<div class="free-private__cta">
+			<CTA href="https://app.lueftungsprotokoll-digital.de" variant="primary" size="large">
+				Jetzt starten – ohne Anmeldung
+			</CTA>
+		</div>
+	</div>
+</section>
+
+<style>
+	.free-private {
+		padding: 5rem 1.5rem;
+		background: linear-gradient(135deg, #059669 0%, #047857 100%);
+		color: white;
+		text-align: center;
+	}
+
+	.free-private__container {
+		max-width: 900px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.free-private__badge {
+		display: inline-block;
+		padding: 0.5rem 1.5rem;
+		background: rgba(255, 255, 255, 0.2);
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: 50px;
+		font-size: 0.875rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.free-private__heading {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin: 0;
+		line-height: 1.2;
+	}
+
+	.free-private__description {
+		font-size: 1.125rem;
+		line-height: 1.6;
+		max-width: 700px;
+		margin: 0;
+		opacity: 0.95;
+	}
+
+	.free-private__features {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+
+	.feature-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.75rem 1.25rem;
+		background: rgba(255, 255, 255, 0.15);
+		border-radius: 8px;
+		font-size: 0.875rem;
+		font-weight: 600;
+		backdrop-filter: blur(10px);
+	}
+
+	.feature-badge__icon {
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	.free-private__cta {
+		margin-top: 1rem;
+	}
+
+	.free-private__cta :global(.cta--primary) {
+		background: white;
+		color: var(--color-accent);
+	}
+
+	.free-private__cta :global(.cta--primary:hover) {
+		background: #f9fafb;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 768px) {
+		.free-private {
+			padding: 3rem 1.25rem;
+		}
+
+		.free-private__heading {
+			font-size: 2rem;
+		}
+
+		.free-private__description {
+			font-size: 1rem;
+		}
+
+		.free-private__features {
+			flex-direction: column;
+			width: 100%;
+			max-width: 300px;
+		}
+
+		.feature-badge {
+			justify-content: center;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.free-private__heading {
+			font-size: 1.75rem;
+		}
+	}
+</style>

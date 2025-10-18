@@ -1,0 +1,131 @@
+---
+const steps = [
+	{
+		number: '1',
+		title: 'App öffnen',
+		description: 'Keine Installation nötig – einfach im Browser starten',
+	},
+	{
+		number: '2',
+		title: 'Lüften & dokumentieren',
+		description: 'Raum auswählen, Messwerte eintragen, speichern',
+	},
+	{
+		number: '3',
+		title: 'Rechtssicher nachweisen',
+		description: 'Bei Bedarf PDF exportieren und vorlegen',
+	},
+];
+---
+
+<section class="how-it-works">
+	<div class="how-it-works__container">
+		<h2 class="how-it-works__heading">So einfach geht's</h2>
+		<div class="how-it-works__steps">
+			{steps.map((step, index) => (
+				<div class="step">
+					<div class="step__number">{step.number}</div>
+					<h3 class="step__title">{step.title}</h3>
+					<p class="step__description">{step.description}</p>
+					{index < steps.length - 1 && (
+						<div class="step__arrow" aria-hidden="true">→</div>
+					)}
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.how-it-works {
+		padding: 5rem 1.5rem;
+		background: white;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.how-it-works__container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.how-it-works__heading {
+		font-size: 2.5rem;
+		font-weight: 800;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--color-text);
+	}
+
+	.how-it-works__steps {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		position: relative;
+	}
+
+	.step {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 1rem;
+		position: relative;
+	}
+
+	.step__number {
+		width: 64px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--color-accent);
+		color: white;
+		font-size: 2rem;
+		font-weight: 800;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	.step__title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin: 0;
+		color: var(--color-text);
+	}
+
+	.step__description {
+		font-size: 1rem;
+		color: var(--color-muted);
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.step__arrow {
+		position: absolute;
+		right: -2rem;
+		top: 2rem;
+		font-size: 2rem;
+		color: var(--color-accent);
+		opacity: 0.3;
+	}
+
+	@media (max-width: 768px) {
+		.how-it-works {
+			padding: 3rem 1.25rem;
+		}
+
+		.how-it-works__heading {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.how-it-works__steps {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+
+		.step__arrow {
+			display: none;
+		}
+	}
+</style>

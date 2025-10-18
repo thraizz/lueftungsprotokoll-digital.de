@@ -1,0 +1,95 @@
+---
+import CTA from './CTA.astro';
+---
+
+<section class="hero">
+	<div class="hero__container">
+		<div class="hero__content">
+			<h1 class="hero__title">
+				Lüftungsprotokoll<br />rechtssicher dokumentieren
+			</h1>
+			<p class="hero__subtitle">
+				Schützen Sie sich bei Schimmel und Mietstreitigkeiten. Kostenlos, ohne Anmeldung, DSGVO-konform nach DIN 1946-6.
+			</p>
+			<div class="hero__cta">
+				<CTA href="https://app.lueftungsprotokoll-digital.de" variant="primary" size="large">
+					Jetzt kostenlos nutzen
+				</CTA>
+			</div>
+			<p class="hero__notice">
+				Keine Registrierung • Keine Kosten • Ihre Daten bleiben lokal
+			</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		padding: 4rem 1.5rem;
+		text-align: center;
+		background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 100%);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.hero__container {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.hero__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.hero__title {
+		font-size: 3rem;
+		font-weight: 800;
+		color: var(--color-text);
+		margin: 0;
+		letter-spacing: -0.02em;
+	}
+
+	.hero__subtitle {
+		font-size: 1.25rem;
+		color: var(--color-muted);
+		max-width: 700px;
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.hero__cta {
+		margin-top: 1rem;
+	}
+
+	.hero__notice {
+		font-size: 0.875rem;
+		color: var(--color-muted);
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			padding: 3rem 1.25rem;
+		}
+
+		.hero__title {
+			font-size: 2rem;
+		}
+
+		.hero__subtitle {
+			font-size: 1.125rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero__title {
+			font-size: 1.75rem;
+		}
+
+		.hero__subtitle {
+			font-size: 1rem;
+		}
+	}
+</style>

@@ -1,0 +1,120 @@
+---
+const features = [
+	{
+		icon: '✓',
+		title: 'Rechtssicher dokumentieren',
+		description: 'Vollständige Protokollierung nach DIN 1946-6 mit Zeitstempeln und unveränderlichen Einträgen für rechtliche Nachweise.',
+	},
+	{
+		icon: '🔒',
+		title: 'DSGVO-konform & privat',
+		description: 'Ihre Daten bleiben lokal im Browser gespeichert. Keine Cloud, keine Weitergabe, volle Kontrolle über Ihre Informationen.',
+	},
+	{
+		icon: '📄',
+		title: 'PDF-Export für Behörden',
+		description: 'Exportieren Sie rechtsgültige PDF-Protokolle mit allen Pflichtangaben für Versicherungen, Vermieter oder Sachverständige.',
+	},
+	{
+		icon: '⚡',
+		title: 'Einfach & schnell',
+		description: 'Intuitive Eingabe in unter 2 Minuten. Automatische Vorausfüllung und intelligente Lüftungsempfehlungen.',
+	},
+];
+---
+
+<section class="features">
+	<div class="features__container">
+		<h2 class="features__heading">Warum Lüftungsprotokoll Digital?</h2>
+		<div class="features__grid">
+			{features.map((feature) => (
+				<div class="feature">
+					<div class="feature__icon" aria-hidden="true">{feature.icon}</div>
+					<h3 class="feature__title">{feature.title}</h3>
+					<p class="feature__description">{feature.description}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.features {
+		padding: 5rem 1.5rem;
+		background: white;
+	}
+
+	.features__container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.features__heading {
+		font-size: 2.5rem;
+		font-weight: 800;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--color-text);
+	}
+
+	.features__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2.5rem;
+	}
+
+	.feature {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 2rem;
+		border: 1px solid var(--color-border);
+		border-radius: 12px;
+		transition: all 0.2s ease;
+	}
+
+	.feature:hover {
+		border-color: var(--color-accent);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		transform: translateY(-4px);
+	}
+
+	.feature__icon {
+		font-size: 2.5rem;
+		line-height: 1;
+		margin-bottom: 0.5rem;
+	}
+
+	.feature__title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin: 0;
+		color: var(--color-text);
+	}
+
+	.feature__description {
+		font-size: 1rem;
+		color: var(--color-muted);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.features {
+			padding: 3rem 1.25rem;
+		}
+
+		.features__heading {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.features__grid {
+			gap: 1.5rem;
+		}
+
+		.feature {
+			padding: 1.5rem;
+		}
+	}
+</style>

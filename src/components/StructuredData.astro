@@ -1,0 +1,117 @@
+---
+// Schema.org structured data for better search engine understanding
+const organizationSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: 'Lüftungsprotokoll Digital',
+	url: 'https://lueftungsprotokoll-digital.de',
+	logo: 'https://lueftungsprotokoll-digital.de/logo.png',
+	description: 'Kostenlose Web-Anwendung zur rechtssicheren Dokumentation des Lüftungsverhaltens nach DIN 1946-6',
+	sameAs: [],
+	contactPoint: {
+		'@type': 'ContactPoint',
+		contactType: 'customer support',
+		availableLanguage: ['de'],
+	},
+};
+
+const softwareApplicationSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'SoftwareApplication',
+	name: 'Lüftungsprotokoll Digital',
+	applicationCategory: 'BusinessApplication',
+	operatingSystem: 'Web Browser',
+	offers: {
+		'@type': 'Offer',
+		price: '0',
+		priceCurrency: 'EUR',
+	},
+	description: 'Dokumentieren Sie Ihr Lüftungsverhalten rechtssicher nach DIN 1946-6. Kostenlos, keine Anmeldung, DSGVO-konform.',
+	featureList: [
+		'Rechtssichere Dokumentation nach DIN 1946-6',
+		'DSGVO-konforme lokale Datenspeicherung',
+		'PDF-Export für Behörden und Versicherungen',
+		'Keine Registrierung erforderlich',
+		'Komplett kostenlos',
+	],
+	screenshot: 'https://lueftungsprotokoll-digital.de/screenshot.png',
+	aggregateRating: {
+		'@type': 'AggregateRating',
+		ratingValue: '5',
+		reviewCount: '1',
+	},
+};
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'Ist die Nutzung wirklich komplett kostenlos?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Ja, Lüftungsprotokoll Digital ist zu 100% kostenlos. Es gibt keine versteckten Kosten, keine Premium-Versionen und keine Abos. Alle Funktionen stehen Ihnen dauerhaft kostenfrei zur Verfügung.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Muss ich mich registrieren oder anmelden?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Nein! Sie können sofort loslegen, ohne Account-Erstellung. Ihre Daten werden lokal in Ihrem Browser gespeichert. Kein Login, kein Passwort, keine E-Mail-Adresse erforderlich.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Sind meine Protokolle rechtlich gültig?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Ja. Die App erfasst alle Pflichtangaben gemäß DIN 1946-6 und deutscher Rechtsprechung. Ihre Einträge sind mit Zeitstempeln versehen und nach dem Speichern unveränderlich. Die PDF-Exporte enthalten alle notwendigen Informationen für rechtliche Nachweise.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Wo werden meine Daten gespeichert?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Ihre Daten bleiben ausschließlich lokal in Ihrem Browser (IndexedDB). Es erfolgt keine Übertragung an Server oder Cloud-Dienste. Sie haben die volle Kontrolle und können Ihre Daten jederzeit exportieren oder löschen.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Ist die App DSGVO-konform?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Absolut. Da Ihre Daten ausschließlich lokal gespeichert werden und keine Weitergabe stattfindet, sind Sie standardmäßig DSGVO-konform. Es werden nur technisch notwendige Cookies verwendet.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Wie kann ich meine Protokolle exportieren?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Sie können jederzeit rechtsgültige PDF-Dokumente mit allen Einträgen, Zeitstempeln und Pflichtangaben exportieren. Diese PDFs können Sie Versicherungen, Vermietern oder Sachverständigen vorlegen.',
+			},
+		},
+	],
+};
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{
+			'@type': 'ListItem',
+			position: 1,
+			name: 'Home',
+			item: 'https://lueftungsprotokoll-digital.de',
+		},
+	],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
