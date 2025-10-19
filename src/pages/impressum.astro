@@ -10,6 +10,10 @@ import Layout from '../layouts/Layout.astro';
 		<div class="legal-container">
 			<h1>Impressum</h1>
 
+			<p class="legal-note">
+				Angaben gemäß § 5 DDG (Digital Services Act)
+			</p>
+
 			<section class="legal-section">
 				<h2>Verantwortlich für den Inhalt:</h2>
 				<address>
@@ -168,6 +172,13 @@ import Layout from '../layouts/Layout.astro';
 
 	.back-link a:hover {
 		text-decoration: underline;
+	}
+
+	.legal-note {
+		color: var(--color-muted);
+		font-size: 0.9rem;
+		margin-bottom: 2rem;
+		font-style: italic;
 	}
 
 	@media (max-width: 768px) {

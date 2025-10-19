@@ -216,41 +216,99 @@ import Layout from '../layouts/Layout.astro';
 			</section>
 
 			<section class="legal-section">
-				<h2>5. Besondere Hinweise zur Nutzung der Web-App</h2>
+				<h2>5. Progressive Web App (PWA) - Datenspeicherung und Technologien</h2>
 
-				<h3>Lokale Datenspeicherung</h3>
-				<p>
-					Die Lüftungsprotokoll Digital Web-App speichert Ihre Lüftungsprotokolle standardmäßig ausschließlich lokal auf
-					Ihrem Gerät (im Browser-Speicher mittels IndexedDB). Diese Daten verlassen Ihr Gerät nicht und werden nicht an
-					unsere Server übertragen, es sei denn, Sie aktivieren explizit die optionale Cloud-Synchronisation.
+				<h3>Vollständig Offline-First und Lokal</h3>
+				<p class="highlight-box">
+					<strong>Wichtig:</strong> Diese Progressive Web App (PWA) speichert ALLE Ihre Daten ausschließlich lokal auf Ihrem Gerät.
+					Es gibt KEINE Server-Übertragung, KEINE Cloud-Synchronisation und KEINE Weitergabe an Dritte.
+					Ihre Daten verlassen niemals Ihr Gerät.
 				</p>
 
-				<h3>Cloud-Synchronisation (optional)</h3>
+				<h3>IndexedDB - Lokale Datenspeicherung</h3>
 				<p>
-					Wenn Sie die Cloud-Synchronisation aktivieren, werden Ihre Lüftungsprotokolle verschlüsselt auf Servern innerhalb
-					der Europäischen Union gespeichert. Die Datenübertragung erfolgt verschlüsselt (HTTPS/TLS). Wir haben keinen
-					Zugriff auf die unverschlüsselten Inhalte Ihrer Protokolle.
+					Die App nutzt IndexedDB, eine Browser-Datenbank, um folgende Daten lokal zu speichern:
+				</p>
+				<ul>
+					<li><strong>Wohnungsdaten:</strong> Name, Adresse, Größe und Raumkonfigurationen Ihrer Wohnungen</li>
+					<li><strong>Lüftungseinträge:</strong> Datum, Uhrzeit, Räume, Temperaturen, Luftfeuchtigkeit und Lüftungsdauer</li>
+					<li><strong>App-Einstellungen:</strong> Theme-Präferenzen und Checklisten-Einstellungen</li>
+				</ul>
+				<p>
+					<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der App-Funktionalität)
+				</p>
+				<p>
+					<strong>Speicherdauer:</strong> Unbegrenzt, bis Sie die Daten manuell löschen oder den Browser-Cache leeren
 				</p>
 
-				<h3>Fotos und Bilddaten</h3>
+				<h3>Service Worker - Offline-Funktionalität</h3>
 				<p>
-					Hochgeladene Fotos (z.B. von Hygrometern oder Fenstern) werden ebenfalls ausschließlich lokal auf Ihrem Gerät
-					gespeichert bzw. bei aktivierter Cloud-Synchronisation verschlüsselt in der Cloud abgelegt. Wir analysieren oder
-					verwenden diese Bilder nicht für andere Zwecke.
+					Die App nutzt einen Service Worker, um folgende Funktionen bereitzustellen:
+				</p>
+				<ul>
+					<li><strong>Offline-Verfügbarkeit:</strong> App-Dateien (HTML, CSS, JavaScript) werden lokal gecacht</li>
+					<li><strong>Schnellere Ladezeiten:</strong> Wiederholte Besuche laden gecachte Ressourcen</li>
+					<li><strong>Installierbarkeit:</strong> Ermöglicht Installation der App auf Ihrem Gerät wie eine native App</li>
+				</ul>
+				<p>
+					<strong>Keine Tracking-Funktion:</strong> Der Service Worker wird ausschließlich für technische Zwecke eingesetzt,
+					nicht für Nutzeranalyse oder Tracking.
+				</p>
+				<p>
+					<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse an optimaler App-Performance)
 				</p>
 
-				<h3>Wetterdaten</h3>
+				<h3>Cookies und Local Storage</h3>
 				<p>
-					Für die automatische Integration von Wetterdaten werden anonymisierte Anfragen an einen Wetterdienst-API gesendet.
-					Dabei wird lediglich Ihre ungefähre geografische Position (basierend auf Ihrer IP-Adresse oder manueller Eingabe)
-					übermittelt, jedoch keine personenbezogenen Daten.
+					Die App verwendet ausschließlich technisch notwendige Cookies und Local Storage für:
+				</p>
+				<ul>
+					<li>Theme-Präferenz (Hell-/Dunkelmodus)</li>
+					<li>Checklisten-Status (aktiviert/deaktiviert)</li>
+					<li>App-Metadaten (Datenbank-Version, Migrations-Status)</li>
+				</ul>
+				<p>
+					<strong>Keine Marketing- oder Tracking-Cookies:</strong> Es werden keine Cookies für Nutzeranalyse,
+					Werbung oder Tracking eingesetzt.
+				</p>
+				<p>
+					<strong>Cookie-Consent-Banner nicht erforderlich:</strong> Da ausschließlich technisch notwendige Cookies
+					verwendet werden, ist gemäß DSGVO kein Cookie-Consent-Banner erforderlich.
 				</p>
 
-				<h3>Datenexport und Löschung</h3>
+				<h3>Datenhoheit und Kontrolle</h3>
 				<p>
-					Sie können jederzeit alle Ihre Daten als PDF exportieren und Ihre lokalen Daten vollständig löschen. Bei aktivierter
-					Cloud-Synchronisation können Sie auch alle Cloud-Daten dauerhaft löschen.
+					<strong>Sie haben die volle Kontrolle:</strong>
 				</p>
+				<ul>
+					<li><strong>Export:</strong> Jederzeit vollständiger Datenexport als JSON-Datei möglich</li>
+					<li><strong>Import:</strong> Daten-Wiederherstellung durch JSON-Import</li>
+					<li><strong>PDF-Export:</strong> Protokolle als PDF für Archivierung oder Weitergabe</li>
+					<li><strong>Löschung:</strong> Vollständige Datenlöschung über Browser-Einstellungen oder App-Funktion</li>
+				</ul>
+				<p>
+					<strong>Geräte-Sicherheit:</strong> Die Verantwortung für die Sicherheit der lokal gespeicherten Daten
+					liegt beim Nutzer. Wir empfehlen:
+				</p>
+				<ul>
+					<li>Gerätesperrung mit PIN/Passwort/Biometrie aktivieren</li>
+					<li>Regelmäßige Backups über die Export-Funktion erstellen</li>
+					<li>Bei Geräteverlust: Browser-Daten remote löschen (falls Gerätefinder-Funktion aktiv)</li>
+				</ul>
+
+				<h3>Keine Datenübertragung an Dritte</h3>
+				<p class="highlight-box">
+					<strong>Transparenz:</strong> Diese App kontaktiert KEINE externen Server oder Dienste.
+					Es gibt keine Integration von:
+				</p>
+				<ul>
+					<li>Analyse-Tools (kein Google Analytics, Matomo, etc.)</li>
+					<li>Tracking-Pixeln oder Beacons</li>
+					<li>Social-Media-Plugins</li>
+					<li>Werbediensten</li>
+					<li>Cloud-Speicher-Anbietern</li>
+					<li>CDNs für externe Ressourcen (alle Assets sind lokal eingebunden)</li>
+				</ul>
 			</section>
 
 			<section class="legal-section">
@@ -384,6 +442,14 @@ import Layout from '../layouts/Layout.astro';
 
 	.back-link a:hover {
 		text-decoration: underline;
+	}
+
+	.highlight-box {
+		background: #f0f9ff;
+		border-left: 4px solid var(--color-accent);
+		padding: 1rem 1.5rem;
+		margin: 1.5rem 0;
+		border-radius: 4px;
 	}
 
 	@media (max-width: 768px) {
