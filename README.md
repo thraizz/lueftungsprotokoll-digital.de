@@ -244,7 +244,7 @@ Diese Spezifikation bildet die Grundlage für eine rechtssichere, benutzerfreund
 - Maschinenlesbare Formate für Sachverständige
 - Alle Datenfelder inklusive Metadaten
 
-## Zusatzfunktionen (Premium/Pro-Version)
+## Mögliche Zusatzfunktionen
 
 ### 4.1 Erweiterte Features
 - **Mehrere Wohnungen/Objekte verwalten** (für Vermieter)
