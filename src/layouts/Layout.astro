@@ -77,6 +77,14 @@ const ogImageURL = new URL(ogImage, Astro.site);
 
 		<!-- Performance hints -->
 		<meta name="format-detection" content="telephone=no" />
+
+		<script
+          is:inline
+          defer
+          data-domain="lueftungsprotokoll-digital.de"
+          data-api="/api/wildflower/event"
+          src="https://lueftungsprotokoll-digital.de/api/wildflower/script.js"
+    ></script>
 	</head>
 	<body>
 		<slot />
